@@ -1,0 +1,12 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@trpc/server": "^10.43.3",
+    "cors": "^2.8.5",
+    "zod": "^3.22.4"
+  }
+}
