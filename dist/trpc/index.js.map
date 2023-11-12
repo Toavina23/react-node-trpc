@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../server/src/trpc/index.ts"],"names":[],"mappings":";;;;;;;;;AAAA,OAAO,EAAE,MAAM,EAAE,eAAe,EAAE,MAAM,WAAW,CAAC;AACpD,MAAM,CAAC,MAAM,SAAS,GAAG,MAAM,CAAC;IAC9B,KAAK,EAAE,eAAe,CAAC,KAAK,CAAC,GAAS,EAAE;QACtC,OAAO,yBAAyB,CAAC;IACnC,CAAC,CAAA,CAAC;CACH,CAAC,CAAC"}

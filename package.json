@@ -2,13 +2,14 @@
   "name": "trpc-react",
   "version": "1.0.0",
   "description": "a template for trpc node react fullstack app",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specfied\" && exit 1",
     "dev:server": "tsx watch server/src",
     "dev:client": "cd ./client && vite",
     "dev": "run-p dev:* --print-label",
-    "start": "node dist/server",
-    "build": "tsc"
+    "start": "node dist/index.js",
+    "build": "tsc && cd ./client && npm run build"
   },
   "workspaces": [
     "client",
