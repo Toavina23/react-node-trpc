@@ -4,4 +4,5 @@ export const appRouter = router({
     return "the message is changing";
   }),
 });
+
 export type AppRouter = typeof appRouter;

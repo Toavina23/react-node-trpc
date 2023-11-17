@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
+    "lib": ["es5", "es6"],
     "module": "NodeNext",
+    "target": "es5",
     "esModuleInterop": true,
-    "target": "ES2016",
     "moduleResolution": "NodeNext",
     "sourceMap": true,
     "outDir": "dist",
-	"baseUrl": ".",
-    "paths": {
-    }
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {}
   },
-  "include": ["server"],
+  "include": ["server"]
 }

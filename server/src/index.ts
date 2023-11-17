@@ -4,8 +4,8 @@ import express from "express";
 import { inferAsyncReturnType } from "@trpc/server";
 import { appRouter } from "./trpc/index.js";
 import "dotenv/config";
-import path, { dirname } from "path";
-import { fileURLToPath } from "url";
+import path from "path";
+import { AppDataSource } from "./data-source.js";
 
 /**
  * the function that creates trpc context for each
@@ -36,8 +36,6 @@ app.use(
 /**
  * static site hosting
  */
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 if (process.env.PROD === "true") {
   app.use(express.static(path.join(__dirname, "static")));
@@ -47,5 +45,16 @@ if (process.env.PROD === "true") {
 }
 
 const PORT = process.env.PORT ?? 8000;
+
+
+/**
+ * Typeorm initialization
+ */
+
+AppDataSource.initialize()
+  .then(() => {
+    console.log("Database initialized successfully...")
+  })
+  .catch((error) => console.log(error));
 
 app.listen(PORT);
